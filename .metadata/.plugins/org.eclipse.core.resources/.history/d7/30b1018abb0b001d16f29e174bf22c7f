@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.my.mapper.CustomerMapper">
+<select id="selectById" resultType="Customer"> <!-- com.my.dto.Customer를 별칭으로 바꿈 -->
+<!-- Select구문이 검색해온 1개의 행에 대한 resulttype 자료형의 객체가 자동 생성됨  -->
+SELECT * FROM customer WHERE id=#{id}
+</select>
+
+<insert id="insert" parameterType="Customer">
+INSERT INTO customer(id, pwd, name, address, status, buildingno) VALUES (#{id}, #{pwd}, #{name}, #{address}, 1, #{buildingno})
+</insert>
+</mapper>

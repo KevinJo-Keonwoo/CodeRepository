@@ -1,0 +1,46 @@
+package com.my.repository;
+
+import java.util.List;
+
+import org.springframework.stereotype.Repository;
+
+import com.my.dto.Board;
+import com.my.exception.AddException;
+import com.my.exception.FindException;
+import com.my.exception.ModifyException;
+import com.my.exception.RemoveException;
+
+@Repository
+public class BoardOracleRepository implements BoardRepository {
+
+	@Override
+	public List<Board> selectByPage(int currentPage, int cntPerPage) throws FindException {
+		return null;
+	}
+
+	@Override
+	public List<Board> selectByWord(String word, int currentPage, int cntPerPage) throws FindException {
+		return null;
+	}
+
+	@Override
+	public Board selectByBoardNo(int boardNo) throws FindException {
+		return null;
+	}
+
+	@Override
+	public void update(Board board) throws ModifyException {
+
+	}
+
+	@Override
+	public void delete(int boardNo) throws RemoveException {
+
+	}
+
+	@Override
+	public void insert(Board board) throws AddException {
+
+	}
+
+}

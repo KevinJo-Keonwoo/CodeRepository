@@ -1,0 +1,15 @@
+package com.my.repository;
+
+import static org.junit.Assert.*;
+
+import org.junit.Test;
+
+public class ProductOracleRepositoryTest {
+	@Autowired
+	private ProductOracleRepository repository;
+	@Test
+	public void test() {
+		fail("Not yet implemented");
+	}
+
+}
